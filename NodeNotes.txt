@@ -1,0 +1,78 @@
+                            Node : run time environment + js library / Backend Technology
+                --------------------------------------------------------------------
+
+* Cross platform runtime environment
+* it's having a lot of js libraries so we can run js files outside the browser 
+  thats why we are using Node.Js .
+* Node is created by google
+
+- use to  Create client server applications, web applications - server application
+- Open sourse technology
+- contents are written by js
+
+-  Features
+    - Extreamly Fast 
+    - Asynchrounous and event driven
+    - single threaded
+    - highly scalable
+    - no buffering
+    - open sourse 
+
+- Node Parts
+    - Global object : eg: setTimeOut(), console.log() - we can access everywhere
+    - Modules : eg: require('library/file') - if we want to use a file inside another file first you export
+                    the file then import it in where ever want you  to use it.
+                - Built in :
+                    - fs        (read a file)
+                    - path
+                    - process : to access currently running process using :- environmental variables
+                    - http      (client)
+                    - https
+                    - events
+                    - crypto    (encryption / decryption)
+                
+                - user definrd : using module.exports for exporting and require for importing
+       - packages : eg: npm i package-name
+            - package.json -   (configuration file of npm) npm init -y
+            - node_modules - holding the copies of external packages
+            - package-lock.json - version holding files  of dependencies
+
+    - Node Backend Concepts :-
+-------------------------------------------------------
+        - client-server archetecture
+            - server side
+            - http
+        - API (connection between two systems) (end points of api is url)
+        - crud (create, read, update, delete )
+        - RESTful API's (its following rest archectecture)(http request client to server communication)
+                          (stateless communication) (cacheable ie,fast)(http requests - post, get, put, delete)
+        - JSON 
+        - CORS (Cross orgin resourse sharing) - data / resourse sharing between different port numbers
+
+- Express : framework of node.Js
+-----------------------------------------------------
+
+- Features
+    - fast
+    - minimalist
+  - packages 
+      - express
+      - cors
+      - dotenv
+      - mangoose
+-mangoose : elegant mongodb object modeling for node.js
+
+- Middle Weare : is a function used to control request response cycle.
+  - to create a middle ware:
+        - function name(req,res,next){}
+  - types of middle ware 
+            - Application specific middle ware -  works for all requests. eg:- express.json()
+            - router specific middleware - works in specific routes.
+
+- Authorization : using json webtoken
+        - install jsonwebtoken : npm i jsonwebtoken
+        - using jsonwebtoken , generate token in controller
+                - generate token : using sign(payload,secert key)
+                - verify token in router specific middleware :verify(token, secert key)
+     
+                    
